@@ -7,9 +7,10 @@
 </head>
 
 <body>
-  <form>
-    <input type="text" placeholder="โปรดกรอกรหัสนักศึกษา" pattern="(59|6[01])-040626-[0-9]{4}-[0-9]{1}" maxlength=" 16"
-      required>
+  <form method="post" action="form-echo.php">
+    <p>กรอกรหัสนักศึกษา</p>
+    <input type="text" placeholder="##-######-####-#" pattern="(59|6[01])-040626-[0-9]{4}-[0-9]{1}" maxlength=" 16"><br>
+    <button>ส่งข้อมูล</button>
   </form>
 </body>
 

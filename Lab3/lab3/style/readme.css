@@ -1,0 +1,28 @@
+html
+
+.yellow-bg{
+  background-color: yellow;
+  text-decoration: underline;
+}
+
+.gray-bg{
+  background-color: gray;
+}
+
+#year{
+ color: red;
+font-style: italic;
+font-weight: bold;
+}
+
+table,td {
+  border: 1px solid black;
+}
+
+#row1:hover{
+background-color: red;
+}
+
+#row2:hover{
+  background-color: blue;
+}
