@@ -1,0 +1,28 @@
+    body {
+      text-align: center;
+      background-color: #FFE4C4;
+      margin: 40px;
+    }
+
+    div{
+      background-color: #FFF8DC;
+      padding: 20px;
+      text-align: left;
+    }
+
+    a  {
+      color:#000;
+      text-decoration: none;
+    }
+
+    b {
+      color: #800000;
+    }
+
+    strong{
+      color: #D2691E;
+    }
+
+    footer{
+      margin-top: 20px;
+    }
