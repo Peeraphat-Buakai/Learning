@@ -1,0 +1,85 @@
+    body {
+            background-color: rgb(103,126,255);
+      height: 100vh;
+    }
+    .box {
+      width: 90%;
+      margin:  auto;
+    }
+    .headertitle {
+      text-align: center;
+      padding: 40px;
+       font-size: xx-large;
+    }
+    .box-content {
+      /* height: 200px; */
+      margin-top: 0px;
+      background-color: white;
+      border-radius: 10px;
+    }
+    .flex-container {
+      display: flex;
+}
+
+.flex-container > div {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  width: 33.33%;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+.content1 {
+   background-color: rgb(51, 38, 233);
+}
+span{
+  margin-left: 10%;
+}
+
+.submit{
+  text-align: right;
+  padding: 10px 5% 10px 0;
+  /* margin-left: 100px; */
+}
+
+column{
+   display: flex;
+}
+
+.test{
+  margin-left: 10%;
+  padding-top: 10px ;
+}
+
+.column > div {
+  width: 50%; 
+  padding: 10px;
+  /* height: 100px; */
+}
+
+input[type=number]{
+  /* background-color: forestgreen; */
+  width: 100px;
+  height: 25px;
+}
+
+input[type=date]{
+  width: 130px;
+  height: 25px;
+}
+
+
+.submit{
+  text-align: right;
+  padding: 10px 5% 15px 0;
+  /* margin-left: 100px; */
+}
+
+input[type=submit]{
+ background-color: rgb(66, 88, 214);
+  width: 100px;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+}

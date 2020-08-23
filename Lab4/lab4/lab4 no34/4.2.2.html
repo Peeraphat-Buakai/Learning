@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Lab4 No.4.2</title>
+  <link rel="stylesheet" href="/css/new.css">
+</head>
+
+<body>
+  <div class="box">
+    <div class="headertitle">แบบฟอร์มจองทัวร์</div>
+    <div class="box-content">
+      <div class="flex-container">
+        <div> ข้อมูลผู้ใช้</div>
+        <div>ข้อมูลเข้าสู่ระบบ</div>
+        <div class="content1">ข้อมูลทัวร์ที่ต้องการ</div>
+      </div>
+      <form action="/4.2 new.html">
+        <div class="column">
+          <div>
+            <span>เเพคเก็จทัวร์ :</span>
+            <select required>
+              <option value="">--select--</option>
+              <option>Thailand</option>
+              <option>America</option>
+              <option>China</option>
+              <option>England</option>
+              <option>Italy</option>
+            </select><br><br>
+            <span>วันที่เดินทาง :</span>
+            <input type="date" required><br><br>
+            <span>จำนวนผู้เดินทาง :</span>
+            <input type="number" required min="1" max="10"><br><br>
+            <span>เน้นการท่องเที่ยวเเบบใด?</span><br>
+            <div class="test">
+              <input type="checkbox" value="n1"> ชอปปิ้ง
+              <input type="checkbox" value="n2"> ธรรมชาติ
+              <input type="checkbox" value="n3"> ทะเล
+            </div>
+
+            <br>
+            <div>
+              <span>ยอมรับเงื่อนไขเเละข้อตกลง</span>
+              <input type="radio" id="I agree" name="gender" value="I agree">
+              <label for="male">I agree</label>
+              <input type="radio" id="I disagree" name="gender" value="I disagree">
+              <label for="female">I disagree</label> &nbsp; &nbsp;<br>
+            </div>
+          </div>
+        </div>
+        <div class="submit">
+          <input type="submit" alt="submit" value="NEXT">
+        </div>
+      </form>
+    </div>
+</body>
+
+</html>
