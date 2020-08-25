@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Flexbox Demo 09</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <style>
+    html {
+      overflow-y: auto;
+      background: #408040;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.5;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      background: #80a080;
+    }
+
+    div.search {
+      padding: 2em 1em;
+    }
+
+    div.mobile_bar {
+      display: flex;
+      justify-content: space-between;
+      background: #80a080;
+      padding: 5px 5px 10px;
+    }
+
+    main {
+      display: flex;
+    }
+
+    nav {
+      order: 1;
+      width: 200px;
+      background: #efffef;
+    }
+
+    article {
+      order: 2;
+      flex: 1;
+      overflow: auto;
+      min-height: 480px;
+      background: #ffffff;
+    }
+
+    aside {
+      order: 3;
+      width: 200px;
+      background: #efffef;
+    }
+
+    aside p {
+      font-size: 75%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background: #408040;
+    }
+
+    h1,
+    h2 {
+      color: #008000;
+      margin: 1em 0;
+      text-align: center;
+    }
+
+    p {
+      margin: 2em 15%;
+    }
+
+    img {
+      display: block;
+    }
+
+    ul.menu {
+      padding: 0 1em;
+      margin: 0;
+    }
+
+    ul.menu li {
+      padding: 5px 10px;
+      border-bottom: solid 1px #ccddcc;
+      font-size: small;
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      margin: 0 1em;
+      color: #ffffff;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a.dead:hover {
+      text-decoration: none;
+    }
+
+    ul.menu li:hover {
+      background-color: #ccffcc;
+    }
+
+    ul.menu li.dead:hover {
+      background-color: #efffef;
+    }
+
+    ul.menu li a {
+      display: block;
+    }
+
+    ul.menu li a {
+      color: #404040;
+    }
+
+    ul.menu li a:hover {
+      text-decoration: underline;
+    }
+
+    ul.menu li.dead a {
+      color: #808080;
+    }
+
+    ul.menu li.dead a:hover {
+      text-decoration: none;
+    }
+
+    /* MOBILE DEVICE SPECIFIC */
+    @media only screen and (max-width: 599px) {
+
+      header,
+      main {
+        flex-flow: column;
+      }
+
+      article {
+        min-height: initial;
+      }
+
+      aside {
+        width: 100%;
+      }
+
+      nav {
+        display: none;
+        visibility: none;
+        width: 100%;
+      }
+
+      div.logo,
+      div.search {
+        width: 100%;
+      }
+
+      div.search {
+        padding: 0.5em 0;
+        text-align: center;
+      }
+
+      p {
+        text-align: left;
+        margin: 1em 10%;
+      }
+
+      div.content {
+        width: 100%;
+      }
+    }
+
+    /* SXGA/WXGA Screens and wider */
+    @media only screen and (min-width: 600px) {
+      div.mobile_bar {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    function toggle_visibility(id) {
+      var e = document.getElementById(id);
+      if (e.style.display == 'block')
+        e.style.display = 'none';
+      else
+        e.style.display = 'block';
+    }
+    window.onresize = function (event) {
+      var e = document.getElementById("menu");
+      var w = window.innerWidth;
+      if (w > 599)
+        e.style.display = 'block';
+      else
+        e.style.display = 'none';
+    };
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="http://www.technologyuk.net/assets/demo-images/responsive-demo-02-logo.gif" alt="Site Logo" />
+    </div>
+    <div class="search">
+      <form>
+        <input type="search" placeholder="Search the site..." />
+        <button>Search</button>
+      </form>
+    </div>
+  </header>
+
+  <div class="mobile_bar">
+    <a href="#"><img src="http://www.technologyuk.net/assets/demo-images/responsive-demo-home.gif" alt="Home" /></a>
+    <a href="#" onClick='toggle_visibility("menu"); return false;'><img
+        src="http://www.technologyuk.net/assets/demo-images/responsive-demo-menu.gif" alt="Menu" /></a>
+  </div>
+
+  <main>
+    <article>
+      <h1>Article</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit libero sit amet nunc ultricies, eu feugiat
+        diam placerat. Phasellus tincidunt nisi et lectus pulvinar, quis tincidunt lacus viverra. Phasellus in aliquet
+        massa. Integer iaculis massa id dolor venenatis scelerisque. Morbi non eros a ex interdum molestie in eget leo.
+        Proin pulvinar facilisis eros, sed porta ante imperdiet ut. Suspendisse tincidunt facilisis metus non faucibus.
+        Integer posuere vehicula congue. Sed pharetra felis sapien, at imperdiet diam lacinia quis.
+        <br /><br />
+      </p>
+    </article>
+    <nav id="menu">
+      <h2>Navigation</h2>
+      <ul class="menu">
+        <li class="dead"><a>Home</a></li>
+        <li><a href="#">Page 01</a></li>
+        <li><a href="#">Page 02</a></li>
+        <li><a href="#">Page 03</a></li>
+        <li><a href="#">Page 04</a></li>
+        <li><a href="#">Page 05</a></li>
+        <li><a href="#">Page 06</a></li>
+        <li><a href="#">Page 07</a></li>
+      </ul>
+    </nav>
+    <aside>
+      <h2>Aside</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit libero sit amet nunc ultricies, eu feugiat
+        diam placerat. Phasellus tincidunt nisi et lectus pulvinar, quis tincidunt lacus viverra. Phasellus in aliquet
+        massa. Integer iaculis massa id dolor venenatis scelerisque.
+        <br /><br />
+      </p>
+    </aside>
+  </main>
+  <footer>
+    <a href="#">Sitemap</a>
+    <a href="#">Contact</a>
+    <a href="#">Privacy</a>
+  </footer>
+</body>
+
+</html>

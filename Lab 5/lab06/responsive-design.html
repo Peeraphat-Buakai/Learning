@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/7daf524a94.js" crossorigin="anonymous"></script>
+    <style>
+        @media (max-width : 700px) {
+            .flexible {
+                display: block;
+            }
+
+            .product {
+                text-align: center;
+            }
+
+            .content {
+                width: auto;
+                margin: 3%;
+                background-color: slategray;
+                padding: 15px;
+
+            }
+
+            .wrap {
+                background-color: royalblue;
+                padding: 10px;
+                margin-left: 20%;
+                margin-right: 20%;
+                border-radius: 10px;
+                text-align: center;
+                text-decoration: none;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        @media (min-width: 701px) {
+            .flexible {
+                display: flex;
+            }
+
+            .product {
+                text-align: center;
+            }
+
+            .content {
+                width: auto;
+                /* margin: 3%; */
+                background-color: slategray;
+                padding: 20px;
+
+            }
+
+            .wrap {
+                background-color: royalblue;
+                padding: 10px;
+                margin: 10px;
+                margin-left: 40%;
+                margin-right: 40%;
+                border-radius: 10px;
+                text-align: center;
+
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="flexible">
+
+        <div class="product">
+            <img src="imgs/clock.jpg">
+        </div>
+
+        <div class="content">
+            Garmin Instinct, Rugged Outdoor Watch with GPS,
+            Features GLONASS and Galileo, Heart Rate Monitoring and
+            3-axis Compass, Tundra<br><br>
+            <div class="wrap">
+                <a href="">
+                    <div class="botton"><i class="fas fa-cart-plus"></i>Add to cart</div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
