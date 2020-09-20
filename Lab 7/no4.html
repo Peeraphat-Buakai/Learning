@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script>
+    function countTheWord(str) {
+      str = str.toUpperCase();
+      let stipstr = str.split(" ");
+      let count = 0;
+      for (let i in stipstr) {
+        if (stipstr[i] == "THE") {
+          count++;
+        }
+      }
+      alert("Number of 'the' is " + count)
+    }
+
+  </script>
+</head>
+
+<body>
+  The eighth ruler of the Fifth Dynasty in the late 25th century.<br><br>
+  <a href="#" onclick="countTheWord('The eighth ruler of the Fifth Dynasty in the late 25th century')">Click for count
+    'the'</a>
+
+</body>
+
+</html>

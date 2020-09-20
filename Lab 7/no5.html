@@ -1,0 +1,50 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    table,
+    tr,
+    th,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+  <script>
+    function addrow() {
+      let aname = document.getElementById("name").value
+      let Addr = document.getElementById("address").value
+      let pho = document.getElementById("phone").value
+      let table = document.getElementById("mytable")
+      let row = table.insertRow();
+      let cell1 = row.insertCell(0);
+      let cell2 = row.insertCell(1);
+      let cell3 = row.insertCell(2);
+      cell1.innerHTML = aname;
+      cell2.innerHTML = Addr;
+      cell3.innerHTML = pho;
+    }
+  </script>
+</head>
+
+<body>
+  <label>ชื่อลูกค้า :</label>
+  <input type="text" id="name"><br>
+  <label>ที่อยู่ :</label>
+  <input type="text" id="address"><br>
+  <label>โทรศัพท์ :</label>
+  <input type="text" id="phone"><br>
+  <button type="submit" id="add" onclick="addrow()">เพิ่ม</button>
+  <table id="mytable">
+    <tbody>
+      <tr>
+        <th>ชื่อลูกค้า</th>
+        <th>ที่อยู่</th>
+        <th>โทรศัพท์</th>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+</html>
