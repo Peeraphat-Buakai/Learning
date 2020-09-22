@@ -10,8 +10,8 @@
       let objectData = JSON.parse(rawData)
       let result = document.getElementById('result')
 
-      for (let i = 0; i < objectData.length; i++) {
-        let content = i + ". " + "ชื่อโรงพยาบาล" + objectData.properties[i].name
+      for (let i = 0; i < objectData.features.properties.length; i++) {
+        let content = i + ". " + "ชื่อโรงพยาบาล" + objectData.features.properties[i].name
 
         let li = document.createElement('li')
         li.innerHTML = content
