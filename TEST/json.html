@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    async function getDataFromAPI() {
+      let response = await fetch('http://202.44.40.193/~aws/priv_hos.json')
+      let rawData = await response.text()
+      let objectData = JSON.parse(rawData)
+      let result = document.getElementById('result')
+
+      for (let i = 0; i < objectData.length; i++) {
+        let content = i + ". " + "ชื่อโรงพยาบาล" + objectData.properties[i].name
+
+        let li = document.createElement('li')
+        li.innerHTML = content
+        result.appendChild(li)
+        console.log(objectData.properties[i].name)
+      }
+    }
+
+    getDataFromAPI()
+  </script>
+</head>
+
+<body>
+  <h1>โรงพยาบาลเอกชน ในกทม.</h1>
+  <ul id="result"></ul>
+</body>
+
+</html>
