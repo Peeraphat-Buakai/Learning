@@ -2,30 +2,59 @@
 <html>
 
 <head>
+<<<<<<< HEAD
   <script>
     async function getDataFromAPI() {
       let response = await fetch('http://202.44.40.193/~aws/priv_hos.json')
+=======
+  <meta charset="UTF-8">
+  <script>
+
+    async function getDataFromAPI() {
+      let response = await fetch('http://202.44.40.193/~aws/priv_hos.json')
+      console.log('---->', response);
+>>>>>>> b11d9c520c08a10142f1ba470576879ea0f59b6e
       let rawData = await response.text()
       let objectData = JSON.parse(rawData)
       let result = document.getElementById('result')
 
+<<<<<<< HEAD
       for (let i = 0; i < objectData.length; i++) {
         let content = i + ". " + "ชื่อโรงพยาบาล" + objectData.properties[i].name
+=======
+      for (let i = 0; i < objectData.features.length; i++) {
+        let content = 'ชื่อโรงพยาบาล ' + objectData.features[i].properties.name + ":"
+        console.log(objectData.features[i].properties.name)
+        content += "(" + objectData.features[i].properties.num_bed + ")"
+>>>>>>> b11d9c520c08a10142f1ba470576879ea0f59b6e
 
         let li = document.createElement('li')
         li.innerHTML = content
         result.appendChild(li)
+<<<<<<< HEAD
         console.log(objectData.properties[i].name)
       }
     }
 
     getDataFromAPI()
+=======
+
+      }
+    }
+    getDataFromAPI()
+
+>>>>>>> b11d9c520c08a10142f1ba470576879ea0f59b6e
   </script>
 </head>
 
 <body>
   <h1>โรงพยาบาลเอกชน ในกทม.</h1>
+<<<<<<< HEAD
   <ul id="result"></ul>
+=======
+  <!-- <h1>โรงพยาบาลเอกชน ในกทม.</h1> -->
+  <ol type="1 " id="result"></ol>
+>>>>>>> b11d9c520c08a10142f1ba470576879ea0f59b6e
 </body>
 
 </html>
