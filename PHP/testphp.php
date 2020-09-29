@@ -15,7 +15,7 @@
 
 ชื่อ : <?=$myName?><br>
 อายุ : <?=$age?> 
-
+<br>
 <?php
 
 $person = array("fullname" =>"John", "height"=>"173","age"=>"43");
